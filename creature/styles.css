@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 16px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 32px;
+}
+
+nav ul li a {
+    color: #04ff43;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+#home {
+    background: url('') no-repeat center center/cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0f0101;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.home-content p {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.cta-button {
+    background: #f39c12;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e67e22;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#about, #services, #portfolio, #contact {
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 32px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #a2f5a0;
+    padding: 32px;
+    margin: 16px;
+    flex: 1 1 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background: #8bc0f1;
+    padding: 32px;
+    flex: 1 1 45%;
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(80, 77, 77, 0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+    margin: auto;
+}
+
+form input, form textarea {
+    padding: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 16px;
+    border: none;
+    background: #f39c12;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #0f0f0f;
+}
+
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 32px;
+}
+/* Add this to your existing CSS */
+#nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    #nav-links.active {
+        display: flex;
+    }
+    #menu-toggle {
+        display: block;
+    }
+    nav ul li {
+        margin: 16px 0;
+    }
+}
+
